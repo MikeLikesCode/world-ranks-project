@@ -20,12 +20,15 @@ export default function Country({ country }) {
       country.borders.map((border) => getCountry(border))
     );
 
-    setBorders(borders);
+    setBorders(borders)
   };
 
   useEffect(() => {
-    getBorders();
-  }, []);
+
+      getBorders();
+    
+  }, [borders]);
+
   
   return (
     <Layout title={country.name}>
@@ -100,9 +103,9 @@ export default function Country({ country }) {
               </div>
               <div className={styles.details_panel_borders_container}>
                 {borders.map(({ flag, name, alpha3Code }) => (
-                 <Link  href={`/country/${alpha3Code}`}> 
-                 <div key={name} className={styles.details_panel_borders_country}>
-                    <img key={alpha3Code} src={flag} alt={name} />
+                 <Link key={alpha3Code} href={`/country/${alpha3Code}`}> 
+                 <div className={styles.details_panel_borders_country}>
+                    <img src={flag} alt={name} />
                     <div
                       className={styles.details_panel_borders_name}
                     >
