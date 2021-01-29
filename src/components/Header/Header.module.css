@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:32px;
+}
+
+.themeSwitcher {
+    border:none;
+    background-color:transparent;
+    padding:0;
+    
+
+    color: var(--text-color-secondary);
+    margin-left: 6px;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
